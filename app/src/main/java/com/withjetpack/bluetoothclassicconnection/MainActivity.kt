@@ -10,14 +10,11 @@ import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.withjetpack.bluetoothclassicconnection.navhost.AppNavigation
-import com.withjetpack.bluetoothclassicconnection.presentation.detail.BluetoothViewModel
 import com.withjetpack.bluetoothclassicconnection.ui.theme.BluetoothClassicConnectionTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
-    private val viewModel: BluetoothViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     val navController = rememberNavController()
-                    AppNavigation(navController, viewModel)
+                    AppNavigation(navController)
 
 
                 }

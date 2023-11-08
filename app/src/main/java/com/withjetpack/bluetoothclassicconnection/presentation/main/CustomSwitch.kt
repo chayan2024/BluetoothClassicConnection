@@ -25,8 +25,7 @@ fun CustomSwitch(
     ) {
         Text(
             text = labelText,
-            color = Color.Blue,
-            modifier = Modifier.weight(0.5f) // Expand to take available space
+            color = Color.Blue
         )
         Switch(
             checked = switchState,
